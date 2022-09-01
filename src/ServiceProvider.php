@@ -1,6 +1,6 @@
 <?php
 
-namespace Pathshala\Auth;
+namespace Analyzen\Auth;
 
 use Illuminate\Support\ServiceProvider as SupportServiceProvider;
 use Illuminate\Support\Facades\Route;
