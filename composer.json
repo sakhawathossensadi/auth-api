@@ -24,5 +24,7 @@
         }
     },
     "minimum-stability": "dev",
-    "require": {}
+    "require": {
+        "laravel/passport": "12.x-dev"
+    }
 }
