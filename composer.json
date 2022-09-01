@@ -1,0 +1,19 @@
+{
+    "name": "analyzen/auth",
+    "description": "This is an auth package",
+    "type": "laravel-package",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Analyzen\\Auth\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "sakhawathossensadi",
+            "email": "newtonss919@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
