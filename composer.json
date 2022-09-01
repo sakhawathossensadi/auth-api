@@ -5,7 +5,9 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Analyzen\\Auth\\": "src/"
+            "Analyzen\\Auth\\": "src/",
+            "Analyzen\\Auth\\Database\\Factories\\": "database/factories/",
+            "Analyzen\\Auth\\Database\\Seeders\\": "database/seeders/"
         }
     },
     "authors": [
@@ -14,6 +16,13 @@
             "email": "newtonss919@gmail.com"
         }
     ],
+    "extra": {
+        "laravel" : {
+            "providers": [
+                "Analyzen\\Auth\\ServiceProvider"
+            ]
+        }
+    },
     "minimum-stability": "dev",
     "require": {}
 }
