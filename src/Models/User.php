@@ -18,6 +18,7 @@ class User extends Authenticatable
         'name',
         'email',
         'phone',
+        'password',
         'cv_link',
         //'status', //not mass fillable
     ];
