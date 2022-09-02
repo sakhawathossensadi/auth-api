@@ -16,6 +16,11 @@
             "email": "newtonss919@gmail.com"
         }
     ],
+    "autoload-dev": {
+        "psr-4": {
+            "Analyzen\\Auth\\Tests\\": "tests/"
+        }
+    },
     "extra": {
         "laravel" : {
             "providers": [
