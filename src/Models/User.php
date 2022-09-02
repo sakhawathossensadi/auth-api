@@ -26,4 +26,9 @@ class User extends Authenticatable
         'password',
         'remember_token',
     ];
+
+    protected static function newFactory()
+    {
+        return \Analyzen\Auth\Database\Factories\UserFactory::new();
+    }
 }
