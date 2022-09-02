@@ -6,6 +6,7 @@ use Illuminate\Foundation\Testing\WithFaker;
 use Orchestra\Testbench\TestCase as OrchestraTestCase;
 use Laravel\Passport\PassportServiceProvider;
 use Analyzen\Auth\Models\User;
+use Analyzen\Auth\ServiceProvider;
 
 class TestCase extends OrchestraTestCase
 {
@@ -55,6 +56,7 @@ class TestCase extends OrchestraTestCase
             'Analyzen\\Auth\\ServiceProvider',
             'Analyzen\\Auth\\AuthServiceProvider',
             PassportServiceProvider::class,
+            ServiceProvider::class,
         ];
     }
 }
