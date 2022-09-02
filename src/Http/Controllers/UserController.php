@@ -2,12 +2,20 @@
 
 namespace Analyzen\Auth\Http\Controllers;
 
+use Analyzen\Auth\Http\Requests\UserRequest;
+use Analyzen\Auth\Http\Resources\UserResource;
+use Analyzen\Auth\Models\User;
 use Illuminate\Http\Request;
 
 class UserController extends BaseController
 {
-    public function register(Request $request)
+    public function register(UserRequest $request)
     {
-        dd("inside");
+        $userData = $request->all();
+        $userData['password'] = bcrypt($userData['password']);
+
+        $user = User::create($userData);
+
+        return response(new UserResource($user), 201);
     }
 }

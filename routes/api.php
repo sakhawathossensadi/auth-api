@@ -10,11 +10,7 @@ Route::group(
     ],
     function () {
         Route::group(['middleware' => 'guest:api'], function () {
-            Route::get('register', [UserController::class, 'register'])->name('user.registration');
+            Route::post('register', [UserController::class, 'register'])->name('user.registration');
         });
     }
 );
-
-Route::get('hello', function () {
-    return "dafa";
-});
