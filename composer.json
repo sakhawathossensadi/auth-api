@@ -34,7 +34,7 @@
     },
     "minimum-stability": "dev",
     "require": {
-        "laravel/passport": "12.x-dev"
+        "laravel/passport": "^10.0"
     },
     "scripts": {
         "test": "vendor/bin/phpunit",
