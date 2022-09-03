@@ -20,13 +20,22 @@ class User extends Authenticatable
         'phone',
         'password',
         'cv_link',
-        //'status', //not mass fillable
+        'status',
     ];
 
     protected $hidden = [
         'password',
         'remember_token',
     ];
+
+    public function getStatusAttribute($value): bool
+    {
+        if ($value == self::STATUS_ACTIVE) {
+            return true;
+        }
+
+        return false;
+    }
 
     protected static function newFactory()
     {
