@@ -13,6 +13,7 @@ class UserController extends BaseController
     {
         $userData = $request->all();
         $userData['password'] = bcrypt($userData['password']);
+        $userData['status'] = 1;
 
         $user = User::create($userData);
 
