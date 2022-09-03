@@ -24,6 +24,7 @@ class UserApiTest extends TestCase
         $response->assertJsonFragment([
             'name' => 'Sakhawat Hossen',
             'email' => 'sakhawathossen42@gmail.com',
+            'is_active' => true,
         ]);
     }
 }
