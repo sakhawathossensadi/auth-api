@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('phone', 30)->nullable()->after('email_verified_at');
             $table->tinyInteger('status')->default(1)->nullable()->comment('0=inactive, 1=active')->after('email_verified_at');
             $table->text('cv_link')->nullable()->after('email_verified_at');
+            $table->text('role')->nullable()->after('email_verified_at');
         });
     }
 
@@ -37,7 +38,9 @@ return new class extends Migration
             $table->dropColumn(
                 [
                     'phone',
+                    'status',
                     'cv_link',
+                    'role'
                 ]
             );
         });
