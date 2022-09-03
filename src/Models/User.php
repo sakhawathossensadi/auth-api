@@ -21,6 +21,7 @@ class User extends Authenticatable
         'password',
         'cv_link',
         'status',
+        'role'
     ];
 
     protected $hidden = [
