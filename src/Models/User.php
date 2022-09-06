@@ -40,6 +40,13 @@ class User extends Authenticatable
         return false;
     }
 
+    public static function findByUserId(int $id)
+    {
+        $query = self::query()->where('id', $id);
+
+        return $query->firstOrFail();
+    }
+
     protected static function newFactory()
     {
         return \Analyzen\Auth\Database\Factories\UserFactory::new();
