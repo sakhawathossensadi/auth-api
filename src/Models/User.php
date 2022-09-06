@@ -13,6 +13,8 @@ class User extends Authenticatable
 
     const STATUS_ACTIVE = 1;
     const STATUS_INACTIVE = 0;
+    const CANDIDATE = 'candidate';
+    const ADMIN = 'admin';
 
     protected $fillable = [
         'name',
