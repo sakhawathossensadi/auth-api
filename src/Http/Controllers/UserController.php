@@ -20,4 +20,15 @@ class UserController extends BaseController
 
         return response(new UserResource($user), 201);
     }
+
+    public function logout(Request $request)
+    {
+        $user = $request->user();
+        $token = $user->token();
+        $token->revoke();
+
+        return response([
+            'message' => "Logout",
+        ]);
+    }
 }
