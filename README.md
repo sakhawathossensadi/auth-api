@@ -1,6 +1,6 @@
 # auth-api
 
-go to admin-api folder and run
+go to auth-api folder and run
 
     composer update
 
